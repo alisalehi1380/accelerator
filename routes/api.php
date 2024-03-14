@@ -30,10 +30,10 @@ Route::prefix('v1')->group(function (){
                 Route::post('step_four', [FormOneController::class, 'storeStepFour']);
             });
             Route::prefix('update')->group(function (){
-                Route::post('step_one', [FormOneController::class, 'storeStepOne']);
-                Route::post('step_two', [FormOneController::class, 'storeStepTwo']);
-                Route::post('step_three', [FormOneController::class, 'storeStepThree']);
-                Route::post('step_four', [FormOneController::class, 'storeStepFour']);
+                Route::post('step_one', [FormOneController::class, 'updateStepOne']);
+                Route::post('step_two', [FormOneController::class, 'updateStepTwo']);
+                Route::post('step_three', [FormOneController::class, 'updateStepThree']);
+                Route::post('step_four', [FormOneController::class, 'updateStepFour']);
             });
 
         });
