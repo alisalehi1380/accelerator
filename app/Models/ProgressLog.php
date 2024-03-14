@@ -13,6 +13,7 @@ class ProgressLog extends Model
         'tracking_id',
         'step_id',
         'status',
+        'action',
     ];
 
     public function tracking(): BelongsTo

@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\Action;
 use App\Enums\RegistrationStatus;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -23,6 +24,7 @@ return new class extends Migration
             $table->string('platform')->nullable();
             $table->foreignId('step_id');
             $table->enum('status', [RegistrationStatus::getValues()])->default(RegistrationStatus::NOT_COMPLETED);
+            $table->enum('action', Action::getValues());
             $table->timestamps();
         });
     }

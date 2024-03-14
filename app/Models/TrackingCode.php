@@ -16,7 +16,7 @@ class TrackingCode extends Model
     ];
     public function companyField(): BelongsTo
     {
-        return $this->belongsTo(RegistrationField::class);
+        return $this->belongsTo(RegistrationField::class, 'registration_field_id');
     }
     public function progressLog(): HasMany
     {
